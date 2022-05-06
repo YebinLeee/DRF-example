@@ -5,7 +5,7 @@ from django.http import JsonResponse
 
 # REST api endpoint
 def viewjson(request):
-    return Jsonresponse('REST API and point...')
+    return JsonResponse('REST API and point...', safe=False)
 
 # 게시글 작성
 
