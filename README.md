@@ -10,6 +10,9 @@
 - [x] RESTful한 API란?
 - [x] Django 기초 세팅
 - [x] DRF 라이브러리 설치
+- [x] Django Routiung (view-url connetion)
+- [x] [DRF view (function-based views)](https://www.django-rest-framework.org/api-guide/views/#function-based-views)
+- 
 
 <br>
 
