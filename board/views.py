@@ -38,14 +38,15 @@ def boardlist(request):
     
     return Response(serializer.data)
 
-'''
 
 # 게시물 상세 보기
 @api_view(['GET'])
-def detail(request, id):
-    boards = get_object_or_404(Board, pk=id)
+def boardview(request, pk):
+    boards = Board.objects.get(id=pk)
+    serializer = BoardSerializer(boards, many=False) # False로 지정
     
-
+    return Response(serializer.data)
+'''
 
 # 게시글 작성
 @api_view(['POST'])
