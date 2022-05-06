@@ -76,11 +76,14 @@ def boardupdate(request, pk):
         
     return Response(serializer.data)
 
-'''
+
 # 게시물 삭제
 @api_view(['DELETE'])
-def boarddelete(request, id):
-    board = Board.get.object(id=id)
-    board.delete()
+def boardelete(request, pk):
+    board = Board.objects.get(id=pk)
     
-'''
+    if board:
+        board.delete()
+        
+    return Response("Deleted...")
+    
