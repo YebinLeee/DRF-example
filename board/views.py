@@ -11,7 +11,7 @@ from django.utils import timezone
 def viewjson(request):
     return JsonResponse('REST API and point...', safe=False)
 
-# 인덱스
+# 인덱스 - api명세 출력
 @api_view(['GET'])
 def index(request):
     timeBoards = []
@@ -46,13 +46,20 @@ def boardview(request, pk):
     serializer = BoardSerializer(boards, many=False) # False로 지정
     
     return Response(serializer.data)
-'''
+
 
 # 게시글 작성
 @api_view(['POST'])
-def create(request):
+def boardinsert(request):
+    serializer = BoardSerializer(data=request.data)
+    
+    if serializer.is_valid():
+        serializer.save()
+        
+    return Response(serializer.data)
     
 
+'''
 
 # 게시물 수정
 @api_view(['PUT'])
