@@ -12,7 +12,10 @@
 - [x] DRF 라이브러리 설치
 - [x] Django Routiung (view-url connetion)
 - [x] [DRF view (function-based views)](https://www.django-rest-framework.org/api-guide/views/#function-based-views)
-- 
+- [x] Flutter 개발환경 설치 (FE)
+    - Flutter SDK
+    - Android Studio (Emulator AVD)
+    - VSCode - Flutter&Dart Extensions
 
 <br>
 
@@ -21,4 +24,3 @@
 - Django Installation : `pip install django`
 - LocalHost Server : `python manage.py runserver`
 - [Django REST Framework Installation](https://www.django-rest-framework.org/#installation)
-
