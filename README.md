@@ -6,7 +6,7 @@
 
 ## what I studied
 - [x] 강의 개요 (Django REST + Flutter + Docker + 비동기식 마이크로서비스)
-- [x] REST를 왜 사용하는가?
+- [x] REST를 왜 사용하는가? 왜 REST Architecture인가?
 - [x] RESTful한 API란?
 - [x] Django 기초 세팅
 - [x] DRF 라이브러리 설치
@@ -16,6 +16,10 @@
     - Flutter SDK
     - Android Studio (Emulator AVD)
     - VSCode - Flutter&Dart Extensions
+- [ ] Flutter FE - BE 연결
+- [x] REST API - Serializer의 개념
+- [x] REST API - response, decorator-api_view
+- [x] DRF CRUD Basic (GET, POST, PUT, DELETE), field
 
 <br>
 
@@ -24,3 +28,7 @@
 - Django Installation : `pip install django`
 - LocalHost Server : `python manage.py runserver`
 - [Django REST Framework Installation](https://www.django-rest-framework.org/#installation)
+
+<br>
+
+
