@@ -21,5 +21,7 @@ urlpatterns = [
     
     path('accounts/', include('accountApp.urls')),
     
-    path('api-auth/', include('rest_framework.urls'))
+    path('api-auth/', include('rest_framework.urls')),
+    
+    path('quiz/', include('quiz.urls')) # quiz앱의 url 연결
 ]
