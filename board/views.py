@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
 from .models import Board
-from .serializers import Board
+from .serializers import BoardSerializer
 from django.utils import timezone
 
 # REST api endpoint
@@ -29,16 +29,39 @@ def index(request):
     }
     return Response(api_urls)
 
-# 게시글 작성
-
 
 # 게시판 조회
+@api_view(['GET'])
+def boardlist(request):
+    boards = Board.objects.all()
+    serializer = BoardSerializer(boards, many=True)
+    
+    return Response(serializer.data)
 
+'''
 
 # 게시물 상세 보기
+@api_view(['GET'])
+def detail(request, id):
+    boards = get_object_or_404(Board, pk=id)
+    
+
+
+# 게시글 작성
+@api_view(['POST'])
+def create(request):
+    
 
 
 # 게시물 수정
-
+@api_view(['PUT'])
+def update(request, id):
+    
 
 # 게시물 삭제
+@api_view(['DELETE'])
+def delete(request, id):
+    board = Board.get.object(id=id)
+    board.delete()
+    
+'''
