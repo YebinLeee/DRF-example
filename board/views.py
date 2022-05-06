@@ -54,21 +54,32 @@ def boardinsert(request):
     serializer = BoardSerializer(data=request.data)
     
     if serializer.is_valid():
+        print('Valid...')
         serializer.save()
+    else:
+        print('Invalid...') 
         
     return Response(serializer.data)
     
 
-'''
-
 # 게시물 수정
 @api_view(['PUT'])
-def update(request, id):
+def boardupdate(request, pk):
+    boards = Board.objects.get(id=pk)
+    serializer = BoardSerializer(instance=board, data=request.data) # False로 지정
     
+    if serializer.is_valid():
+        print('Valid update...')
+        serializer.save()
+    else:
+        print('Invalid update...') 
+        
+    return Response(serializer.data)
 
+'''
 # 게시물 삭제
 @api_view(['DELETE'])
-def delete(request, id):
+def boarddelete(request, id):
     board = Board.get.object(id=id)
     board.delete()
     
